@@ -40,11 +40,9 @@ def featurize_df(df):
     print("Numarul de features:", nr_of_features)
     print("Numarul de exemple:", nr_of_rows)
     features = np.zeros((nr_of_rows, nr_of_features))
-    i = 0
     for index, row in df.iterrows():
         row_ftrs = featurize(row)
         features[index, :] = row_ftrs
-        i += 1
     return features
 
 def get_submission():
